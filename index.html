@@ -182,7 +182,7 @@
   .exp-table thead tr th:first-child {
     text-align: left;
     border-radius: 8px 0 0 0;
-    width: 35%;
+    width: 60%;
   }
 
   .exp-table thead tr th:last-child {
@@ -461,7 +461,6 @@
         <tr>
           <th>Especialidad</th>
           <th>Años de servicio</th>
-          <th>Dependencias donde los brindó</th>
         </tr>
       </thead>
       <tbody>
@@ -472,22 +471,12 @@
               <input type="number" id="sp_anios" name="sp_anios" min="0" max="50" placeholder="0" value="0">
             </div>
           </td>
-          <td>
-            <div class="exp-cell">
-              <textarea id="sp_deps" name="sp_deps" placeholder="Ej. División de Seguridad Pública, Delegación Central..."></textarea>
-            </div>
-          </td>
         </tr>
         <tr>
           <td>Investigaciones</td>
           <td>
             <div class="exp-cell">
               <input type="number" id="inv_anios" name="inv_anios" min="0" max="50" placeholder="0" value="0">
-            </div>
-          </td>
-          <td>
-            <div class="exp-cell">
-              <textarea id="inv_deps" name="inv_deps" placeholder="Ej. División de Investigación Criminal, DAN..."></textarea>
             </div>
           </td>
         </tr>
@@ -498,17 +487,12 @@
               <input type="number" id="int_anios" name="int_anios" min="0" max="50" placeholder="0" value="0">
             </div>
           </td>
-          <td>
-            <div class="exp-cell">
-              <textarea id="int_deps" name="int_deps" placeholder="Ej. CIPOL, Unidad de Inteligencia..."></textarea>
-            </div>
-          </td>
         </tr>
       </tbody>
     </table>
 
     <div class="total-bar">
-      <span>Total años declarados en rubros:</span>
+      <span>Total de años de experiencia:</span>
       <strong id="total-display">0 años</strong>
     </div>
 
@@ -624,11 +608,11 @@
       anios_total:  document.getElementById('anios_total').value,
       dependencia:  document.getElementById('dependencia').value.trim(),
       sp_anios:     document.getElementById('sp_anios').value || '0',
-      sp_deps:      document.getElementById('sp_deps').value.trim(),
+      sp_deps:      '',
       inv_anios:    document.getElementById('inv_anios').value || '0',
-      inv_deps:     document.getElementById('inv_deps').value.trim(),
+      inv_deps:     '',
       int_anios:    document.getElementById('int_anios').value || '0',
-      int_deps:     document.getElementById('int_deps').value.trim(),
+      int_deps:     '',
       observaciones:document.getElementById('observaciones').value.trim()
     };
 
